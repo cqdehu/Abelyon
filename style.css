@@ -1,0 +1,24 @@
+#header_img {
+    padding: 2.55rem 0 0 0;
+}
+
+#user {
+    height: 1.4rem;
+}
+
+#list {
+    height: 1.4rem;
+}
+
+footer {
+    background: #30a8cb;
+}
+
+.footer_icon{
+    height: 1.45rem;
+}
+
+#date {
+    background: rgb(82, 82, 82);
+    color:rgb(187, 187, 187)
+}
