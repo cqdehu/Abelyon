@@ -58,8 +58,8 @@ tr {
 
 .spec tr:hover {
     border-radius: 10px;
-    background: rgb(138, 33, 33);
-    background: linear-gradient(36deg, rgba(138, 33, 33, 1) 0%, rgba(255, 0, 0, 1) 48%, rgba(130, 0, 0, 1) 98%);
+    background: rgb(138, 33, 33) no-repeat;
+    background: linear-gradient(36deg, rgba(138, 33, 33, 1) 0%, rgba(255, 0, 0, 1) 48%, rgba(130, 0, 0, 1) 98%) no-repeat;
 
 
 }
