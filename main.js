@@ -1,25 +1,41 @@
 $("#m0").click(function(){
-    $(".0").show()
-    $(".1").hide()
-    $(".2").hide()
-    $(".3").hide()
+    if ($("#m0").text() == "Hide"){
+        $("#m0").text("Show")
+    } else {
+        $("#m0").text("Hide") 
+    }
+    
+    $(".0").toggle()
+    
 })
 $("#m1").click(function(){
-    $(".1").show()
-    $(".0").hide()
-    $(".2").hide()
-    $(".3").hide()
+    if ($("#m1").text() == "Hide"){
+        $("#m1").text("Show")
+    } else {
+        $("#m1").text("Hide") 
+    }
+
+    $(".1").toggle()
+
 })
 $("#m2").click(function(){
-    $(".2").show()
-    $(".1").hide()
-    $(".0").hide()
-    $(".3").hide()
+    if ($("#m2").text() == "Hide"){
+        $("#m2").text("Show")
+    } else {
+        $("#m2").text("Hide") 
+    }
+
+    $(".2").toggle()
+
 })
 $("#m3").click(function(){
-    $(".3").show()
-    $(".1").hide()
-    $(".2").hide()
-    $(".0").hide()
+    if ($("#m3").text() == "Hide"){
+        $("#m3").text("Show")
+    } else {
+        $("#m3").text("Hide") 
+    }
+
+    $(".3").toggle()
+
 })
 
