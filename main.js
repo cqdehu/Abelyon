@@ -1,0 +1,25 @@
+$("#m0").click(function(){
+    $(".0").show()
+    $(".1").hide()
+    $(".2").hide()
+    $(".3").hide()
+})
+$("#m1").click(function(){
+    $(".1").show()
+    $(".0").hide()
+    $(".2").hide()
+    $(".3").hide()
+})
+$("#m2").click(function(){
+    $(".2").show()
+    $(".1").hide()
+    $(".0").hide()
+    $(".3").hide()
+})
+$("#m3").click(function(){
+    $(".3").show()
+    $(".1").hide()
+    $(".2").hide()
+    $(".0").hide()
+})
+

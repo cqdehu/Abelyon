@@ -17,8 +17,8 @@
 }
 
 body {
-    background: rgb(255,87,0);
-background: linear-gradient(49deg, rgba(255,87,0,1) 0%, rgba(255,150,0,1) 48%, rgba(255,156,0,1) 100%);
+    background: rgb(255, 87, 0);
+    background: linear-gradient(49deg, rgba(255, 87, 0, 1) 0%, rgba(255, 150, 0, 1) 48%, rgba(255, 156, 0, 1) 100%);
 }
 
 .glass {
@@ -31,12 +31,30 @@ background: linear-gradient(49deg, rgba(255,87,0,1) 0%, rgba(255,150,0,1) 48%, r
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.transparent-table {
-    background-color: transparent;
+.glass2 {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-td, th{
-    color:white;
+.full-width-table {
+    width: 100%;
+  }
+
+td,
+th {
+    color: white;
     padding: 1rem 1rem;
     font-family: 'Rubik', sans-serif;
 }
+
+
+.spec tr:hover {
+    background: rgb(168, 0, 0);
+    background: linear-gradient(49deg, rgba(168, 0, 0, 1) 0%, rgba(138, 0, 0, 1) 27%, rgba(218, 0, 0, 1) 56%, rgba(180, 39, 39, 1) 78%, rgba(255, 0, 0, 1) 98%);
+}
+
