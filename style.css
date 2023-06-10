@@ -43,7 +43,7 @@ body {
 
 .full-width-table {
     width: 100%;
-  }
+}
 
 td,
 th {
@@ -52,9 +52,14 @@ th {
     font-family: 'Rubik', sans-serif;
 }
 
-
-.spec tr:hover {
-    background: rgb(168, 0, 0);
-    background: linear-gradient(49deg, rgba(168, 0, 0, 1) 0%, rgba(138, 0, 0, 1) 27%, rgba(218, 0, 0, 1) 56%, rgba(180, 39, 39, 1) 78%, rgba(255, 0, 0, 1) 98%);
+tr {
+    border-radius: 10px
 }
 
+.spec tr:hover {
+    border-radius: 10px;
+    background: rgb(138, 33, 33);
+    background: linear-gradient(36deg, rgba(138, 33, 33, 1) 0%, rgba(255, 0, 0, 1) 48%, rgba(130, 0, 0, 1) 98%);
+
+
+}
