@@ -5,10 +5,9 @@ function getCookie() {
         data: { json_data: "json" },
         success: function (response) {
             var list = JSON.parse(response);
-            var operation = list[0]
-            var difficulty = list[1]
-            var level = list[2]
-            return operation
+            operation = list[0]
+            difficulty = list[1]
+            level = list[2]
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
@@ -17,5 +16,7 @@ function getCookie() {
 }
 
 $(document).ready(function(){
-    $("#operation").text(getCookie())
+    $("#operation").text(operation)
+    $("#difficulty").text(difficulty)
+    $("#level").text(level)
 })
