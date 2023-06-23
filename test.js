@@ -82,17 +82,21 @@ function getRandomInt(max) {
 }
 
 
-function getOperation(o) {
-    if (o == "addition") {
-        return "+";
-    }
-    if (o == "subtraction") {
-        return "-";
-    }
-    if (o == "multiplication") {
-        return "*";
-    }
-    if (o == "division") {
-        return "/";
-    }
+function getOperator() {
+    getOperationValue(function(operation){
+        if (operation == "addition") {
+            return "+";
+        }
+        if (operation == "subtraction") {
+            return "-";
+        }
+        if (operation == "multiplication") {
+            return "*";
+        }
+        if (operation == "division") {
+            return "/";
+        }
+    })
 }
+
+getOperator()
