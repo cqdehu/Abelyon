@@ -16,4 +16,6 @@ function getCookie() {
     });
 }
 
-getCookie()
+$(document).ready(function(){
+    $("#operation").text(getCookie())
+})
