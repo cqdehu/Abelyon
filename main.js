@@ -6,6 +6,7 @@ function secureCookie() {
         method: 'POST',
         success: function (response) {
             window.location.href = response
+            
         },
         error: function (xhr, status, error) {
             console.log(error);
