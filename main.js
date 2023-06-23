@@ -1,3 +1,16 @@
+function secureCookie() {
+    $.ajax({
+        url: 'secure.php',
+        method: 'POST',
+        success: function (response) {
+            window.location.href = response
+        },
+        error: function (xhr, status, error) {
+            console.log(error);
+        }
+    })
+}
+
 function getOperationValue() {
     var operation = $.cookie("operation")
 
