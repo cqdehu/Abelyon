@@ -81,28 +81,29 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+var operator
 
 function getOperator() {
-    return new Promise(function(resolve, reject) {
-      getOperationValue(function (operation) {
+    
+    getOperationValue(function (operation) {
         if (operation == "addition") {
-          resolve("+");
-        } else if (operation == "subtraction") {
-          resolve("-");
-        } else if (operation == "multiplication") {
-          resolve("*");
-        } else if (operation == "division") {
-          resolve("/");
-        } else {
-          reject("Invalid operation");
+            return "+";
         }
-      });
-    });
-  }
+        if (operation == "subtraction") {
+            return "-";
+        }
+        if (operation == "multiplication") {
+            return "*";
+        }
+        if (operation == "division") {
+            return "/";
+        }
+    })
+}
 
 
 
 $(document).ready(function () {
-    $("#operator").text(getOperator())
+    $("#operator").text(operator)
 })
 
