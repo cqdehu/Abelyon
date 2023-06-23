@@ -86,18 +86,16 @@ function getOperator() {
     getOperationValue(function (operation) {
         if (operation == "addition") {
             return "+";
-        }
-        if (operation == "subtraction") {
+        } else if (operation == "subtraction") {
             return "-";
-        }
-        if (operation == "multiplication") {
+        } else if (operation == "multiplication") {
             return "*";
-        }
-        if (operation == "division") {
+        } else if (operation == "division") {
             return "/";
         }
     })
 }
+
 
 
 $(document).ready(function () {
