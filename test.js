@@ -103,6 +103,6 @@ function getOperator() {
 
 
 $(document).ready(function () {
-    $("#operator").text()
+    $("#operator").text(getOperator())
 })
 
