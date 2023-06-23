@@ -96,6 +96,7 @@ function getOperator(callback) {
         if (operation == "division") {
             var operator = "/";
         }
+        callback(operator)
     })
 }
 
