@@ -48,7 +48,7 @@ function getLevelValue(callback) {
 
 
 function operationStat() {
-    getOperationValue(function(operation){
+    getOperationValue(function (operation) {
         $("#operation").text(operation)
     })
 }
@@ -58,7 +58,7 @@ operationStat()
 
 
 function difficultyStat() {
-    getDifficultyValue(function(difficulty){
+    getDifficultyValue(function (difficulty) {
         $("#difficulty").text(difficulty)
     })
 }
@@ -68,7 +68,7 @@ difficultyStat()
 
 
 function levelStat() {
-    getLevelValue(function(level){
+    getLevelValue(function (level) {
         $("#level").text(level)
     })
 }
@@ -83,26 +83,25 @@ function getRandomInt(max) {
 
 
 function getOperator() {
-    getOperationValue(function(operation){
+    getOperationValue(function (operation) {
         if (operation == "addition") {
-            var operator = "+";
+            return "+";
         }
         if (operation == "subtraction") {
-            var operator = "-";
+            return "-";
         }
         if (operation == "multiplication") {
-            var operator = "*";
+            return "*";
         }
         if (operation == "division") {
-            var operator = "/";
+            return "/";
         }
     })
 }
 
 getOperator()
 
-$(document).ready(function(){
-    getOperator(function(operator){
-        $("#operator").text(operator)
-    })
+$(document).ready(function () {
+    getOperator()
+    $("#operator").text(operator)
 })
