@@ -99,9 +99,9 @@ function getOperator() {
     })
 }
 
-getOperator()
+
 
 $(document).ready(function () {
     getOperator()
-    $("#operator").text(operator)
+    $("#operator").text(getOperator())
 })
