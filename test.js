@@ -63,6 +63,8 @@ function difficultyStat() {
     })
 }
 
+difficultyStat()
+
 
 
 function getRandomInt(max) {
