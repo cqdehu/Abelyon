@@ -86,21 +86,17 @@ function getOperator(callback) {
     getOperationValue(function(operation){
         if (operation == "addition") {
             var operator = "+";
-            callback(operator)
         }
         if (operation == "subtraction") {
             var operator = "-";
-            callback(operator)
         }
         if (operation == "multiplication") {
             var operator = "*";
-            callback(operator)
         }
         if (operation == "division") {
             var operator = "/";
-            callback(operator)
         }
-        
+        callback(operator)
     })
 }
 
