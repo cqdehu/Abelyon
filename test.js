@@ -22,7 +22,7 @@ function getDifficultyValue() {
         success: function (response) {
             var list = JSON.parse(response);
             var difficulty = list[1]
-
+            callback(difficulty)
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
@@ -38,7 +38,7 @@ function getLevelValue() {
         success: function (response) {
             var list = JSON.parse(response);
             var level = list[2]
-
+            callback(level)
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
@@ -53,9 +53,15 @@ function operationStat() {
     })
 }
 
-
 operationStat()
 
+
+
+function difficultyStat() {
+    getDifficultyValue(function(difficulty){
+        $("#difficulty").text(difficulty)
+    })
+}
 
 
 
