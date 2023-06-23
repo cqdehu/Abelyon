@@ -18,5 +18,5 @@ function getCookie() {
 }
 
 $(document).ready(function(){
-    getCookie()
+    $("#operation").html(getCookie())
 })
