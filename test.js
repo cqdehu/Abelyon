@@ -5,7 +5,13 @@ function getCookie() {
         data: { json_data: "json" },
         success: function (response) {
             var list = JSON.parse(response);
-            console.log(list);
+            var operation = list[0]
+            var difficulty = list[1]
+            var level = list[2]
+            console.log(`Operation: ${operation}`)
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
         }
     });
 }
