@@ -82,7 +82,7 @@ function getRandomInt(max) {
 }
 
 
-function getOperator(callback) {
+function getOperator() {
     getOperationValue(function(operation){
         if (operation == "addition") {
             var operator = "+";
@@ -96,7 +96,6 @@ function getOperator(callback) {
         if (operation == "division") {
             var operator = "/";
         }
-        callback(operator)
     })
 }
 
