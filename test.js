@@ -82,24 +82,32 @@ function getRandomInt(max) {
 }
 
 
-function getOperator() {
+function getOperator(callback) {
     getOperationValue(function(operation){
         if (operation == "addition") {
-            return "+";
+            var operator = "+";
+            callback(operator)
         }
         if (operation == "subtraction") {
-            return "-";
+            var operator = "-";
+            callback(operator)
         }
         if (operation == "multiplication") {
-            return "*";
+            var operator = "*";
+            callback(operator)
         }
         if (operation == "division") {
-            return "/";
+            var operator = "/";
+            callback(operator)
         }
+        
     })
 }
 
+getOperator()
+
 $(document).ready(function(){
-    var operator = getOperator()
-    $("#operator").text(operator)
+    getOperator(function(operator){
+        $("#operator").text(operator)
+    })
 })
