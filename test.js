@@ -5,8 +5,7 @@ function getOperationValue() {
         data: { json_data: "json" },
         success: function (response) {
             var list = JSON.parse(response);
-            var operation = list[0]
-            return operation
+            operation = list[0]
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
@@ -49,11 +48,12 @@ function getLevelValue() {
 
 getOperationValue()
 
+
 function operation_stat() {
-    $("#operation").text()
+    $("#operation").text(operation)
 }
 
-
+operation_stat()
 
 
 
