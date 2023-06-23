@@ -254,7 +254,6 @@ $(document).ready(function () {
         $.ajax({
             url: 'exit.php',
             method: 'POST',
-            dataType: 'json', 
             success: function (response) {
                 console.log(response);
             },
