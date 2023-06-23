@@ -78,7 +78,6 @@ function getMath() {
         rNum1 = 21
         rNum2 = 21
     }
-
     var num1 = getRandomInt(rNum1);
     var num2 = getRandomInt(rNum2);
     var operation = $.cookie("operation");
