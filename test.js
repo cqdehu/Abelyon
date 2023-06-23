@@ -102,6 +102,6 @@ function getOperator() {
 
 
 $(document).ready(function () {
-    getOperator()
+    
     $("#operator").text(getOperator())
 })
