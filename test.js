@@ -87,16 +87,16 @@ function getOperator() {
     
     getOperationValue(function (operation) {
         if (operation == "addition") {
-            return "+";
+            var operator = "+";
         }
         if (operation == "subtraction") {
-            return "-";
+            var operator = "-";
         }
         if (operation == "multiplication") {
-            return "*";
+            var operator = "*";
         }
         if (operation == "division") {
-            return "/";
+            var operator = "/";;
         }
     })
 }
