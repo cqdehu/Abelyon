@@ -255,7 +255,6 @@ $(document).ready(function () {
             url: 'exit.php',
             method: 'POST',
             success: function (response) {
-                console.log(response);
                 window.location.href = response
             },
             error: function (xhr, status, error) {
@@ -264,3 +263,4 @@ $(document).ready(function () {
         })
     })
 })
+
