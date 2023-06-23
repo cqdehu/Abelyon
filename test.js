@@ -100,5 +100,6 @@ function getOperator() {
 }
 
 $(document).ready(function(){
-    $("#operator").text(getOperator())
+    var operator = getOperator()
+    $("#operator").text(operator)
 })
