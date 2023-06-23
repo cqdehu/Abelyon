@@ -8,7 +8,7 @@ function getCookie() {
             var operation = list[0]
             var difficulty = list[1]
             var level = list[2]
-            console.log(`Operation: ${operation}`)
+            return operation
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
