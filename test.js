@@ -47,8 +47,6 @@ function getLevelValue() {
 }
 
 
-getOperationValue()
-
 function operation_stat() {
     getOperationValue(function(operation){
         $("#operation").text(operation)
