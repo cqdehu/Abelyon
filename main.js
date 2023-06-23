@@ -1,4 +1,4 @@
-secureCookie()
+
 
 function secureCookie() {
     $.ajax({
