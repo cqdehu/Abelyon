@@ -6,7 +6,7 @@ function secureCookie() {
         method: 'POST',
         success: function (response) {
             window.location.href = response
-            
+
         },
         error: function (xhr, status, error) {
             console.log(error);
@@ -14,15 +14,8 @@ function secureCookie() {
     })
 }
 
-function getOperationValue() {
-    var operation = $.cookie("operation")
 
-    var level = $.cookie("level")
 
-    var difficulty = $.cookie("difficulty")
-
-    console.log(`Operation: ${operation} | Level: ${level} | Difficulty: ${difficulty}`)
-}
 
 
 function getRandomInt(max) {
