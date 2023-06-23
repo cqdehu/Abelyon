@@ -16,7 +16,7 @@ function getCookie() {
 }
 
 $(document).ready(function(){
-    $("#operation").text(operation)
-    $("#difficulty").text(difficulty)
-    $("#level").text(level)
+    $("#operation").text(toString(operation))
+    $("#difficulty").text(toString(difficulty))
+    $("#level").text(toString(level))
 })
