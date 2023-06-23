@@ -99,4 +99,6 @@ function getOperator() {
     })
 }
 
-getOperator()
+$(document).ready(function(){
+    $("#operator").text(getOperator())
+})
