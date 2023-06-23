@@ -47,12 +47,14 @@ function getLevelValue() {
 }
 
 
-function operation_stat() {
+function operationStat() {
     getOperationValue(function(operation){
         $("#operation").text(operation)
     })
 }
 
+
+operationStat()
 
 
 
