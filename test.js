@@ -1,4 +1,4 @@
-function getCookie() {
+function getOperationValue() {
     $.ajax({
         type: "POST",
         url: "getCookie.php",
@@ -6,9 +6,22 @@ function getCookie() {
         success: function (response) {
             var list = JSON.parse(response);
             var operation = list[0]
+            return operation
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
+        }
+    });
+}
+
+function getDifficultyValue() {
+    $.ajax({
+        type: "POST",
+        url: "getCookie.php",
+        data: { json_data: "json" },
+        success: function (response) {
+            var list = JSON.parse(response);
             var difficulty = list[1]
-            var level = list[2]
-            $("#operation").text(operation)
 
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -17,4 +30,49 @@ function getCookie() {
     });
 }
 
-getCookie()
+function getLevelValue() {
+    $.ajax({
+        type: "POST",
+        url: "getCookie.php",
+        data: { json_data: "json" },
+        success: function (response) {
+            var list = JSON.parse(response);
+            var level = list[2]
+
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
+        }
+    });
+}
+
+
+getOperationValue()
+
+function operation_stat() {
+    $("#operation").text()
+}
+
+
+
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+
+function getOperation(o) {
+    if (o == "addition") {
+        return "+";
+    }
+    if (o == "subtraction") {
+        return "-";
+    }
+    if (o == "multiplication") {
+        return "*";
+    }
+    if (o == "division") {
+        return "/";
+    }
+}

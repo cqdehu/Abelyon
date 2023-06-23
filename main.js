@@ -1,5 +1,5 @@
 
-
+//DONE
 function secureCookie() {
     $.ajax({
         url: 'secure.php',
@@ -18,24 +18,7 @@ function secureCookie() {
 
 
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
 
-function getOperation(o) {
-    if (o == "addition") {
-        return "+";
-    }
-    if (o == "subtraction") {
-        return "-";
-    }
-    if (o == "multiplication") {
-        return "*";
-    }
-    if (o == "division") {
-        return "/";
-    }
-}
 
 function evaluateExpression(expression) {
     var tokens = expression.split(" ");
