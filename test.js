@@ -99,9 +99,12 @@ function getOperator() {
     })
 }
 
-
+function test() {
+    return "Hello"
+}
 
 $(document).ready(function () {
     
-    $("#operator").text(getOperator())
+    $("#operator").text(test())
 })
+
