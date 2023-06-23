@@ -83,22 +83,26 @@ function getRandomInt(max) {
 
 
 function getOperator() {
-    getOperationValue(function (operation) {
+    return new Promise(function(resolve, reject) {
+      getOperationValue(function (operation) {
         if (operation == "addition") {
-            return "+";
+          resolve("+");
         } else if (operation == "subtraction") {
-            return "-";
+          resolve("-");
         } else if (operation == "multiplication") {
-            return "*";
+          resolve("*");
         } else if (operation == "division") {
-            return "/";
+          resolve("/");
+        } else {
+          reject("Invalid operation");
         }
-    })
-}
+      });
+    });
+  }
 
 
 
 $(document).ready(function () {
-    $("#operator").text(getOperator())
+    $("#operator").text()
 })
 
