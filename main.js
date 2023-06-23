@@ -5,7 +5,7 @@ function secureCookie() {
         url: 'secure.php',
         method: 'POST',
         success: function (response) {
-            window.location.href = response
+            console.log(response)
         },
         error: function (xhr, status, error) {
             console.log(error);
