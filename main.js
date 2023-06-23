@@ -1,3 +1,5 @@
+secureCookie()
+
 function secureCookie() {
     $.ajax({
         url: 'secure.php',
