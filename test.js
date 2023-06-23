@@ -1,11 +1,12 @@
-function getOperationValue() {
+function getOperationValue(callback) {
     $.ajax({
         type: "POST",
         url: "getCookie.php",
         data: { json_data: "json" },
         success: function (response) {
             var list = JSON.parse(response);
-            operation = list[0]
+            var operation = list[0]
+            callback(operation)
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
@@ -48,12 +49,13 @@ function getLevelValue() {
 
 getOperationValue()
 
-
 function operation_stat() {
-    $("#operation").text(operation)
+    getOperationValue(function(operation){
+        $("#operation").text(operation)
+    })
 }
 
-operation_stat()
+
 
 
 
