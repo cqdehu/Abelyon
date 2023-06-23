@@ -4,52 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATH</title>
+    <title>MAIN | MATH</title>
     <link rel="icon" href="src/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="font.css?v=1">
+    <link rel="stylesheet" href="animation.css?v=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
 </head>
 
-<body id="body">
+<body id="body" class="bg">
 
-    <div class="progress bg-transparent rounded-0" role="progressbar" style="height: 20px">
+    <div class="offcanvas offcanvas-end bg " tabindex="-1" id="settings" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header ">
+            <h5 class="offcanvas-title Rubik fw-bold text-light" id="offcanvasTopLabel">Settings</h5>
+            <a type="button" class="" data-bs-dismiss="offcanvas"><img src="src/x_light.svg" alt=""></a>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row">
+                <div class="col">
+                    <div class="d-grid">
+                        <button class="btn btn-danger Rubik fw-bold" id="exit_btn">EXIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="ExitModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header pb-0 border border-0">
+                    <h5 class="modal-title text-light Rubik fw-bold">Are you sure you quit?</h5>
+                    <img src="src/x_light.svg" data-bs-dismiss="modal" aria-label="Close" alt="">
+                </div>
+                <div class="modal-body border border-0">
+                    <p class="p-0 m-0 Rubik fs-6 fw-bold text-center text-danger">If you quit, the points you have earned so far will be lost.</p>
+                </div>
+                <div class="modal-footer pt-0 border border-0">
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-primary Rubik fw-bold" id="yes_exit_btn">YES</button>
+                        <button type="button" class="btn btn-secondary Rubik fw-bold" data-bs-dismiss="modal">NO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="progress bg-transparent rounded-0" role="progressbar" style="height: 9px">
         <div class="progress-bar bg-light" style="width: 100%" id="progress"></div>
     </div>
 
+
+
     <header class="container-fluid p-3">
         <div class="row d-flex align-items-center">
-            <div class="col">
+            <div class="col-3">
                 <img src="src/MATH_logo_4.svg" alt="logo" height="24" class="px-3">
             </div>
             <div class="col">
-                <p class="p-0 m-0 Rubik small fw-bold text-center text-light">Level 0 | Easy</p>
-                <p class="p-0 m-0 Rubik fs-6 fw-bold text-center text-light">Points: 0</p>
+                <p class="p-0 m-0 Rubik small fw-bold text-center text-light" id="display_level"></p>
+                <p class="p-0 m-0 Rubik fs-6 fw-bold text-center text-light" id="display_points">Points: 0</p>
             </div>
-            <div class="col text-end">
+            <div class="col-3 text-end">
                 <img src="src/settings.svg" alt="" class="px-3" id="settings_icon">
             </div>
         </div>
     </header>
-
-
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="settings" aria-labelledby="offcanvasTopLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title Rubik fw-bold" id="offcanvasTopLabel">Settings</h5>
-            <a type="button" class="" data-bs-dismiss="offcanvas"><img src="src/x.svg" alt=""></a>
-        </div>
-        <div class="offcanvas-body">
-            ...
-        </div>
-    </div>
 
 
 
@@ -153,6 +185,12 @@
                                                 </p>
                                             </td>
                                         </tr>
+
+                                        <tr class="text-center">
+                                            <td class="py-3" colspan="3">
+                                                <p class="p-0 m-0 Rubik fs-1 fw-bold user-select-none b" id="bn">+ / -</p>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -163,7 +201,7 @@
                         <div class="row py-1">
                             <div class="col text-center">
                                 <div class="d-grid px-5">
-                                    <button class="btn btn-light text-dark py-3" id="submit">
+                                    <button class="btn btn-light text-dark btn-lg" id="submit">
                                         <p class="p-0 m-0 Rubik fs-5 fw-bold  text-center">SUBMIT</p>
                                     </button>
                                 </div>

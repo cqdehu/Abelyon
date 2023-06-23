@@ -1,20 +1,6 @@
-body {
-    background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(40,40,40,1) 44%, rgba(47,47,47,1) 77%, rgba(41,41,41,1) 100%);
+.bg {
+    background: #1c1c1c;
     height: 100vh;
-}
-
-.glass {
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-table {
-    width: 100%;
 }
 
 .operation_input {
@@ -24,8 +10,12 @@ table {
     outline: none;
 }
 
+table {
+    width: 100%;
+}
+
 .last_try {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 .b {
@@ -43,6 +33,15 @@ table {
     font-size: 2.5rem;
 }
 
-.btn-close{
+.btn-close {
     outline: none;
+}
+
+.vcenter {
+    height: 100%;
+}
+
+.home_card:hover {
+    transform: scale(1.05);
+    color:  red;
 }

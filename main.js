@@ -1,18 +1,29 @@
+function getOperationValue() {
+    var operation = $.cookie("operation")
+
+    var level = $.cookie("level")
+
+    var difficulty = $.cookie("difficulty")
+
+    console.log(`Operation: ${operation} | Level: ${level} | Difficulty: ${difficulty}`)
+}
+
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
 function getOperation(o) {
-    if (o == 1) {
+    if (o == "addition") {
         return "+";
     }
-    if (o == 2) {
+    if (o == "subtraction") {
         return "-";
     }
-    if (o == 3) {
+    if (o == "multiplication") {
         return "*";
     }
-    if (o == 4) {
+    if (o == "division") {
         return "/";
     }
 }
@@ -37,118 +48,81 @@ function evaluateExpression(expression) {
     }
 }
 
-function getTask(rNum1, rNum2) {
+function getMath() {
+    var level = $.cookie("level")
+    if (level == "0") {
+        rNum1 = 6
+        rNum2 = 6
+    }
+    if (level == "1") {
+        rNum1 = 11
+        rNum2 = 11
+    }
+    if (level == "2") {
+        rNum1 = 21
+        rNum2 = 21
+    }
+
     var num1 = getRandomInt(rNum1);
     var num2 = getRandomInt(rNum2);
-    var operation = getOperation(1);
-    var task = num1 + " " + operation + " " + num2;
+    var operation = $.cookie("operation");
+    var operator = getOperation(operation);
+    var task = num1 + " " + operator + " " + num2;
     $("#operation").text(task);
 
     var result = evaluateExpression(task);
     return result
 }
 
+function handleButtonClick(numberToAdd) {
+    var valueLength = $("#userinput").val().length;
+    if (valueLength != 5) {
+        var userinputValue = $("#userinput").val();
+        var result = userinputValue + numberToAdd;
+        $("#userinput").val(result);
+    }
+}
 
 $("#b0").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 0;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(0);
+});
 
 $("#b1").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 1;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(1);
+});
 
 $("#b2").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 2;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(2);
+});
 
 $("#b3").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 3;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(3);
+});
 
 $("#b4").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 4;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(4);
+});
 
 $("#b5").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 5;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(5);
+});
 
 $("#b6").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 6;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(6);
+});
 
 $("#b7").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 7;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(7);
+});
 
 $("#b8").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 8;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
-})
+    handleButtonClick(8);
+});
 
 $("#b9").click(function () {
-    var valueLength = $("#userinput").val().length;
-    if (valueLength != 5) {
-        var userinputValue = $("#userinput").val();
-        var numberToAdd = 9;
-        var result = userinputValue + numberToAdd;
-        $("#userinput").val(result)
-    }
+    handleButtonClick(9);
+});
 
-})
 
 $("#bc").click(function () {
     $("#userinput").val("")
@@ -160,9 +134,17 @@ $("#br").click(function () {
     $("#userinput").val(updatedValue);
 })
 
+$("#bn").click(function () {
+    var userinputValue = $("#userinput").val();
+    if (userinputValue != "") {
+        var negative = userinputValue * -1
+        $("#userinput").val(negative);
+    }
+})
 
 
-var result = getTask(6, 6);
+
+var result = getMath(6, 6);
 
 var lastResult;
 
@@ -196,7 +178,7 @@ $("#submit").click(function () {
                 $("#submit").toggleClass("btn-success btn-light text-dark text-light")
                 enableButton();
                 $("#userinput").val("");
-                result = getTask(5, 5); // Újra generáljuk a getTask-ot
+                result = getMath(5, 5); // Újra generáljuk a getMath-ot
             }, 1350);
             saveLastResult(userresult)
             $("#last_try").text("")
@@ -220,7 +202,7 @@ $("#submit").click(function () {
                 $("#userinput").val("");
                 $("#userinput").removeClass("shake-element");
                 $("#submit").removeClass("shake-element");
-                result = getTask(5, 5); // Újra generáljuk a getTask-ot
+                result = getMath(5, 5); // Újra generáljuk a getMath-ot
             }, 1350);
             saveLastResult(userresult)
             $("#last_try").text(lastResult)
@@ -241,15 +223,44 @@ function enableButton() {
     $("#submit").prop("disabled", false);
 }
 
+function displayStat() {
+    var level = $.cookie("level")
+    var difficulty = $.cookie("difficulty")
+    $("#display_level").text(`Level ${level} | ${difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}`)
+}
+
+displayStat()
+
 
 
 //Settings
-
-$("#settings_icon").click(function(){
-    $("#settings").offcanvas('show');
+$(document).ready(function () {
+    $("#settings_icon").click(function () {
+        $("#settings").offcanvas('show');
+    })
 })
 
+//Exit
+
+$(document).ready(function () {
+    $("#exit_btn").click(function () {
+        $("#ExitModal").modal('show');
+    });
+});
 
 
-
-
+$(document).ready(function () {
+    $("#yes_exit_btn").click(function () {
+        $.ajax({
+            url: 'exit.php',
+            method: 'POST',
+            dataType: 'json', 
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+            }
+        })
+    })
+})
