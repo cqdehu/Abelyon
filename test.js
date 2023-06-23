@@ -14,7 +14,7 @@ function getOperationValue(callback) {
     });
 }
 
-function getDifficultyValue() {
+function getDifficultyValue(callback) {
     $.ajax({
         type: "POST",
         url: "getCookie.php",
@@ -30,7 +30,7 @@ function getDifficultyValue() {
     });
 }
 
-function getLevelValue() {
+function getLevelValue(callback) {
     $.ajax({
         type: "POST",
         url: "getCookie.php",
@@ -64,6 +64,16 @@ function difficultyStat() {
 }
 
 difficultyStat()
+
+
+
+function levelStat() {
+    getLevelValue(function(level){
+        $("#level").text(level)
+    })
+}
+
+levelStat()
 
 
 
