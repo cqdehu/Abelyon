@@ -81,10 +81,9 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-var operator
+
 
 function getOperator() {
-    
     getOperationValue(function (operation) {
         if (operation == "addition") {
             var operator = "+";
