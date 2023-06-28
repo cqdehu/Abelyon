@@ -13,19 +13,21 @@
 
 <body class="bg-neutral-900">
 
-    <form action="index.php" method="get">
-        <label for="">Username</label>
-        <input type="text" name="username">
-        <label for="">Username</label>
-        <input type="text" name="username">
-        <button type="submit" value="Login"></button>
-    </form>
+    <div class="felx w-full f-full">
+        <form action="index.php" method="get">
+            <label for="">Username</label>
+            <input type="text" name="username">
+            <label for="">Username</label>
+            <input type="text" name="username">
+            <button type="submit" value="Login"></button>
+        </form>
+    </div>
 
     <script src="/test.js"></script>
 </body>
 
 </html>
 
-<?php 
-    echo $_GET["username"]
+<?php
+echo $_GET["username"]
 ?>
