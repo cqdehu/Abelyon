@@ -1,5 +1,6 @@
 <?php 
-    echo "Hello"
+    $operation = $_COOKIE["operation"];
+    echo $operation;
 ?>
 
 <!DOCTYPE html>
