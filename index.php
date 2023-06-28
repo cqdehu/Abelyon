@@ -1,8 +1,3 @@
-<?php 
-    $operation = $_COOKIE["operation"];
-    echo "<b>{$operation}</b>";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,26 +13,18 @@
 
 <body class="bg-dark">
 
-    <main class="container">
-        <div class="row">
-            <div class="col">
-                <p class="p-0 m-0 text-light fw-bold" id="operation">Addition</p>
-            </div>
-            <div class="col">
-                <p class="p-0 m-0 text-light fw-bold" id="difficulty">Easy</p>
-            </div>
-            <div class="flex flex">
-                <p class="text-3xl font-bold" id="level">0</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p class="p-0 m-0 text-light fw-bold" id="operator">-</p>
-            </div>
-        </div>
-    </main>
+    <div class="flex flex-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
 
     <script src="/test.js"></script>
 </body>
 
 </html>
+
+<?php 
+    $operation = $_COOKIE["operation"];
+    echo "<b>{$operation}</b>";
+?>
