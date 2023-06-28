@@ -28,6 +28,12 @@
                     <div>
                         <button type="submit" value="Login">Log In</button>
                     </div>
+                    <div>
+                        <?php
+                        echo $_GET["username"];
+                        echo $_GET["password"];
+                        ?>
+                    </div>
                 </div>
             </form>
         </div>
@@ -37,9 +43,3 @@
 </body>
 
 </html>
-
-<?php
- echo $_GET["username"];
- echo $_GET["password"];
-?>
-
