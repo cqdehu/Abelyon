@@ -3,9 +3,6 @@ module.exports = {
   content: [],
   theme: {
     extend: {
-      fontFamily: {
-        rubik: ['Rubik']
-      }
     },
   },
   plugins: [],
