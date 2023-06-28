@@ -13,7 +13,7 @@
 
 <body class="bg-neutral-900">
 
-    <div class="flex justify-center h-full">
+    <div class="flex justify-center content-center">
         <form action="index.php" method="get">
             <label for="">Username</label>
             <input type="text" name="username">
