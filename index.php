@@ -14,18 +14,20 @@
 <body class="bg-neutral-900">
 
     <div class="flex justify-center items-center h-screen">
-        <div class="border">
-            <form action="index.php" method="get" class="flex flex-col">
-                <div>
-                    <label for="">Username</label><br>
-                    <input type="text" name="username">
-                </div>
-                <div>
-                    <label for="">Username</label><br>
-                    <input type="text" name="username">
-                </div>
-                <div>
-                    <button type="submit" value="Login"></button>
+        <div class="border rounded-md p-3">
+            <form action="index.php" method="get">
+                <div class="flex flex-col">
+                    <div>
+                        <label for="">Username</label><br>
+                        <input type="text" name="username">
+                    </div>
+                    <div>
+                        <label for="">Username</label><br>
+                        <input type="text" name="username">
+                    </div>
+                    <div>
+                        <button type="submit" value="Login"></button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -39,3 +41,5 @@
 <?php
 //echo $_GET["username"]
 ?>
+
+git add --all
