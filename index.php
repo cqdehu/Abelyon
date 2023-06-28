@@ -29,5 +29,5 @@
 </html>
 
 <?php
-echo $_GET["username"]
+//echo $_GET["username"]
 ?>
