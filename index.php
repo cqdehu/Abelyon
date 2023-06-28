@@ -13,11 +13,13 @@
 
 <body class="bg-neutral-400">
 
-    <div class="flex justify-center w-full">
-        <div><input type="text"></div>
-        <div><input type="text"></div>
-        <div><input type="text"></div>
-    </div>
+    <form action="index.php" method="get">
+        <label for="">Username</label>
+        <input type="text" name="username">
+        <label for="">Username</label>
+        <input type="text" name="username">
+        <button type="submit" value="Login"></button>
+    </form>
 
     <script src="/test.js"></script>
 </body>
@@ -25,6 +27,5 @@
 </html>
 
 <?php 
-    $operation = $_COOKIE["operation"];
-    echo "<b>{$operation}</b>";
+    echo $_GET["username"]
 ?>
