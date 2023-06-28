@@ -1,6 +1,6 @@
 <?php 
     $operation = $_COOKIE["operation"];
-    echo $operation;
+    echo "<b>{$operation}</b>";
 ?>
 
 <!DOCTYPE html>
