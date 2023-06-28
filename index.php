@@ -13,7 +13,7 @@
 
 <body class="bg-neutral-900">
 
-    <div class="felx w-full f-full justify-center">
+    <div class="felx justify-center">
         <form action="index.php" method="get">
             <label for="">Username</label>
             <input type="text" name="username">
