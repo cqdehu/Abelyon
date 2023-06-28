@@ -14,7 +14,7 @@
 <body class="bg-neutral-900">
 
     <div class="flex justify-center items-center h-screen">
-        <div class="border rounded-md p-3">
+        <div class="border rounded-md p-3 bg-white">
             <form action="index.php" method="get">
                 <div class="flex flex-col">
                     <div>
