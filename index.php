@@ -42,4 +42,3 @@
 //echo $_GET["username"]
 ?>
 
-git add --all
