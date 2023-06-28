@@ -23,7 +23,7 @@
                     </div>
                     <div class="mb-2">
                         <label for="">Password</label><br>
-                        <input type="text" name="username">
+                        <input type="text" name="password">
                     </div>
                     <div>
                         <button type="submit" value="Login">Log In</button>
@@ -39,6 +39,7 @@
 </html>
 
 <?php
-//echo $_GET["username"]
+ echo $_GET["username"];
+ echo $_GET["password"];
 ?>
 
