@@ -14,13 +14,21 @@
 <body class="bg-neutral-900">
 
     <div class="flex justify-center items-center h-screen">
-        <form action="index.php" method="get">
-            <label for="">Username</label>
-            <input type="text" name="username">
-            <label for="">Username</label>
-            <input type="text" name="username">
-            <button type="submit" value="Login"></button>
-        </form>
+        <div class="border">
+            <form action="index.php" method="get" class="flex flex-col">
+                <div>
+                    <label for="">Username</label>
+                    <input type="text" name="username">
+                </div>
+                <div>
+                    <label for="">Username</label>
+                    <input type="text" name="username">
+                </div>
+                <div>
+                    <button type="submit" value="Login"></button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="/test.js"></script>
