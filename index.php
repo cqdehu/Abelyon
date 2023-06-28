@@ -17,11 +17,11 @@
         <div class="border rounded-md p-3 bg-white">
             <form action="index.php" method="get">
                 <div class="flex flex-col">
-                    <div>
+                    <div class="mb-2">
                         <label for="">Username</label><br>
                         <input type="text" name="username">
                     </div>
-                    <div>
+                    <div class="mb-2">
                         <label for="">Password</label><br>
                         <input type="text" name="username">
                     </div>
