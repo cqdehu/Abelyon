@@ -11,12 +11,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 </head>
 
-<body class="bg-dark">
+<body class="bg-neutral-400">
 
-    <div class="flex flex-col w-full justify-center">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+    <div class="flex justify-center w-full">
+        <div><input type="text"></div>
+        <div><input type="text"></div>
+        <div><input type="text"></div>
     </div>
 
     <script src="/test.js"></script>
