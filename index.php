@@ -13,7 +13,7 @@
 
 <body class="bg-dark">
 
-    <div class="flex flex-col">
+    <div class="flex flex-col w-full">
         <div>1</div>
         <div>2</div>
         <div>3</div>
