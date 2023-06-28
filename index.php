@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 </head>
 
-<body class="bg-neutral-400">
+<body class="bg-neutral-900">
 
     <form action="index.php" method="get">
         <label for="">Username</label>
